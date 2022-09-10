@@ -1,0 +1,104 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Train-Ware", "Synapse")
+
+--Main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+MainSection:NewButton("Inf Yield", "Admin Script Very Useful and easy to use", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+MainSection:NewToggle("Super Human", "Get a Speed, Jump, and Health Buff!", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+        game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 500
+        game.Players.LocalPlayer.Character.Humanoid.Health = 500
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+        game.Players.LocalPlayer.Character.Humanoid.Health = 100
+    end
+end)
+
+
+--LocalPlayer
+local Player = Window:NewTab("Local Player")
+local PlayerSection = Player:NewSection("Local Player")
+
+PlayerSection:NewSlider("Walk Speed", "Speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("Jump Power", "SliderInfo", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+PlayerSection:NewSlider("Max Health", "Set your max health", 500, 100, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.MaxHealth = s
+end)
+
+PlayerSection:NewButton("Re-Gen to max health", "Give you your max health", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 500
+end)
+
+--Other
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Trolling")
+
+
+OtherSection:NewButton("Chat Hax", "Chat As Other Players", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ant-7802/--/main/straightmilk.lua'))()
+end)
+
+
+--Credits
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewSection("Credits")
+
+
+CreditsSection:NewLabel("Credits Here")
+
+
+--Hub
+local Game = Window:NewTab("Game Scripts")
+local GameSection = Game:NewSection("Doors")
+
+
+GameSection:NewButton("Vynixu Door's Script", "A Script made by Vynixu", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+end)
+
+
+GameSection:NewLabel("↑ Thanks Vynixu for making this script ↑")
+
+local GameSection = Game:NewSection("Adopt Me")
+
+
+GameSection:NewButton("V.G. Hubs's Adopt me Script", "A Script made by V.G. Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+end)
+
+
+GameSection:NewButton("Flare Hub's Adopt me Script", "A Script made by Flare Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/blin"))()
+end)
+
+GameSection:NewLabel("↑ Thanks V.G. Hub and Flare Hub for making these script ↑")
+
+
+local GameSection = Game:NewSection("Bad Bisiness")
+
+
+GameSection:NewButton("HoHo Hub For Bloxfruits", "A BloxFruits script", function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
+
+
+GameSection:NewLabel("^Cool Script By Idk who not me tho^")
+
+
+GameSection:NewLabel("Script is in beta so expect updates")
